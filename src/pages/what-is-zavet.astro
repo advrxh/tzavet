@@ -5,9 +5,7 @@ import PageLayout from "../layouts/PageLayout.astro";
 <PageLayout title="about | tzavet">
     <ul>
         <li class="about-tag">
-            <h1 class="question">
-                what is tzavet?
-            </h1>
+            <h1 class="question">what is tzavet?</h1>
             <p class="explanation">
                 <a href="https://tzavet.advrxh.tech"
                     ><strong><i>tzavet</i></strong></a
@@ -17,8 +15,8 @@ import PageLayout from "../layouts/PageLayout.astro";
             </p>
         </li>
         <div class="flex justify-center align-middle">
-        <div class="h-px w-1/2 my-8 bg-[#BDADEA] border-0"></div>
-</div>
+            <div class="h-px w-1/2 my-8 bg-[#BDADEA] border-0"></div>
+        </div>
 
         <li class="about-tag">
             <h1 class="question">
@@ -34,31 +32,35 @@ import PageLayout from "../layouts/PageLayout.astro";
         </li>
     </ul>
 
-    <a href="/" class="text-xl my-10 hover:underline text-[#BDADEA] font-rubik flex flex-row justify-around w-24">/home <img src="lily.png" class="mx-2" width="34px"></a>
+    <a
+        href="/"
+        class="text-xl my-10 hover:underline text-[#BDADEA] font-rubik flex flex-row justify-around w-24"
+        >/home <img src="/lily.png" class="mx-2" width="34px" /></a
+    >
 </PageLayout>
 <style lang="scss">
     $small: 500px;
 
     ul {
         @media screen and (max-width: $small) {
-        width: 80%
+            width: 80%;
         }
         width: 60%;
         list-style: georgian;
 
         li {
-            margin: .5em;
+            margin: 0.5em;
 
             h1 {
                 font-size: 3em;
                 font-family: montserrat;
-                color: #4E4B5C;
+                color: #4e4b5c;
             }
 
             p {
                 font-size: 1.8em;
                 font-family: rubik;
-                color: #A37871;
+                color: #a37871;
             }
         }
     }

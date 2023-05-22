@@ -1,0 +1,104 @@
+---
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <nav>
+            <div id="logo-container">
+                <div><img src="/lily.png" id="logo" width="128px" /></div>
+                <a href="/what-is-zavet">tzavet</a>
+                <br />
+                <p>(sæv-ɛt)</p>
+            </div>
+            <p>
+                by <a href="https://advrxh.tech" target="_blank">@advrxh</a>
+            </p>
+        </nav>
+        <div id="slot">
+            <slot />
+        </div>
+        <footer
+            class="w-full fixed grid place-items-center bottom-0 py-5 font-montserrat text-[#A37871]"
+        >
+            <div
+                class="w-1/2 lg:w-4/6 flex flex-row justify-center align-middle"
+            >
+                <div class="mx-5">
+                    logo by <a
+                        target="_blank"
+                        class="hover:underline hover:text-[#BDADEA]"
+0                        href="https://instagram.com/tharun_arumughan_"
+                        >@tharunarumughan</a>
+                </div> | <div class="mx-5">
+                    <a
+                        class="hover:underline hover:text-[#BDADEA]"
+                        target="_blank"
+                        href="https://git.advrxh.tech/tzavet">source</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <style lang="scss">
+        #slot {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        html {
+            background-color: #f2efff;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            #logo-container {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin: 1em 0em 1em 0em;
+
+                a {
+                    font-size: 2.5em;
+                    font-family: rubik;
+                    text-align: center;
+                    color: #4e4b5c;
+                    cursor: help;
+                }
+                p {
+                    color: #747088;
+                }
+            }
+
+            p {
+                transform: translateY(-1.2em);
+                font-family: montserrat;
+                color: #a37871;
+                a {
+                    font-style: italic;
+                    text-decoration: underline;
+                    &:hover {
+                        color: #785853;
+                    }
+                }
+            }
+        }
+    </style>
+</html>

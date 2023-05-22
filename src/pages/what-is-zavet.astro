@@ -10,7 +10,7 @@ import "@fontsource/montserrat"
 
     <a
         href="/"
-        class="text-xl my-10 hover:underline text-[#BDADEA] font-rubik flex flex-row justify-around w-24"
+        class="text-xl my-2 lg:my-10 hover:underline text-[#BDADEA] font-rubik flex flex-row justify-around w-24"
         >/home <img src="/lily.png" class="mx-2" width="34px" /></a
     >
     <ul>
@@ -25,7 +25,7 @@ import "@fontsource/montserrat"
             </p>
         </li>
         <div class="flex justify-center align-middle">
-            <div class="h-px w-1/2 my-8 bg-[#BDADEA] border-0"></div>
+            <div class="h-px w-1/2 my-2 lg:my-8 bg-[#BDADEA] border-0"></div>
         </div>
 
         <li class="about-tag">
@@ -51,21 +51,28 @@ import "@fontsource/montserrat"
             width: 80%;
         }
         width: 60%;
-        list-style: georgian;
 
         li {
             margin: 0.5em;
-
+            width: 100%;
             h1 {
                 font-size: 3em;
                 font-family: montserrat;
                 color: #4e4b5c;
+                
+        @media screen and (max-width: $small) {
+        font-size: 1.5em;
+        }
             }
 
             p {
                 font-size: 1.8em;
                 font-family: rubik;
                 color: #a37871;
+
+        @media screen and (max-width: $small) {
+        font-size: 1em;
+        }
             }
         }
     }

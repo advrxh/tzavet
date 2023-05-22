@@ -436,6 +436,16 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.19.tgz#8cfaf2ff603e9aabb910e9c0558c26cf32744061"
   integrity sha512-lAhycmKnVOuRYNtRtatQR1LPQf2oYCkRGkSFnseDAKPl8lu5SOsK/e1sXe5a0Pc5kHIHe6P2I/ilntNv2xf3cA==
 
+"@fontsource/montserrat@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.0.tgz#5fe10ab825257746bbdbc4fdb097cd667231253a"
+  integrity sha512-iYvj+/WThVNBFKew8dqfwx3pHpJswJWwFy46gE6S+dlyd1XR9BhKRXVer4Jvjar/tOwZ3I5kK9Hko0+s3GlBuA==
+
+"@fontsource/rubik@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/rubik/-/rubik-5.0.0.tgz#40cf4fc0fa52e0ff6f5c63cd3c1ef29d9cc58436"
+  integrity sha512-30acxgzxKjy38ndk3un+DCZspn7ckfqMD7BEJ+tUrbwKGS+bH2lnkQfrXwjlgOI6TXumc+/SZdYlY0JPqJt14Q==
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"

@@ -1,17 +1,13 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
-import slugify from "slugify";
 import { INLINES } from "@contentful/rich-text-types";
 import Seo from "../components/seo";
 
 const BlogTemplate = ({ data }) => {
     const blogs = data.allContentfulPost.nodes[0];
-    const { title, mainImage, blog, tags, author, date } = blogs;
-    const pathToImage = getImage(mainImage);
-    const tag = slugify(tags[0], { lower: true });
+    const { title, blog, author, date } = blogs;
 
     const options = {
         renderNode: {
@@ -28,9 +24,6 @@ const BlogTemplate = ({ data }) => {
                 );
             },
         },
-    };
-    const handleSubmit = (e) => {
-        e.preventDefault();
     };
     return (
         <Layout>
@@ -77,16 +70,11 @@ export const query = graphql`
         allContentfulPost(filter: { slug: { eq: $slug } }) {
             nodes {
                 author
-                category
                 date(formatString: "MMMM Do, YYYY")
-                tags
                 title
                 slug
                 blog {
                     raw
-                }
-                mainImage {
-                    gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
                 }
             }
         }

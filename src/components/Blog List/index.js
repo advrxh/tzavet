@@ -9,7 +9,7 @@ const BlogList = ({ blogs = [] }) => {
                 return (
                     <Link
                         key={slug}
-                        to={`/blogs/${slug}`}
+                        to={`/posts/${slug}`}
                         className="w-full flex justify-evenly flex-col my-2"
                     >
                         <div className="h-[2px] w-full bg-[#BDADEA] my-4"></div>

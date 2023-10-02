@@ -4,32 +4,34 @@ import BlogList from "../Blog List";
 import TagList from "../Tag List";
 
 const response = graphql`
-  {
-    allContentfulTiedupBlog(sort: { fields: date, order: DESC }) {
-      nodes {
-        author
-        category
-        date(formatString: "MMMM Do, YYYY")
-        thumbnail {
-          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+    {
+        allContentfulPost(sort: { fields: date, order: DESC }) {
+            nodes {
+                author
+                category
+                date(formatString: "MMMM Do, YYYY")
+                thumbnail {
+                    gatsbyImageData(
+                        layout: CONSTRAINED
+                        placeholder: TRACED_SVG
+                    )
+                }
+                tags
+                title
+                slug
+            }
         }
-        tags
-        title
-        slug
-      }
     }
-  }
 `;
 const AllBlogs = () => {
-  const data = useStaticQuery(response);
-  const blogs = data.allContentfulTiedupBlog.nodes;
+    const data = useStaticQuery(response);
+    const blogs = data.allContentfulPost.nodes;
 
-  return (
-    <div className="grid gap-x-8 gap-y-4 md:grid-cols-3/4 gap-4">
-      <TagList blogs={blogs} />
-      <BlogList blogs={blogs} />
-    </div>
-  );
+    return (
+        <div className="w-full flex justify-center items-center">
+            <BlogList blogs={blogs} />
+        </div>
+    );
 };
 
 export default AllBlogs;
